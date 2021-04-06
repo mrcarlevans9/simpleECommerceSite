@@ -1,0 +1,295 @@
+:root {
+  --clr-primary-colorOne: #14213d;
+  --clr-primary-colorTwo: #99582a;
+  --clr-neutral-neutralOne: #fff;
+  --clr-neutral-neutralTwo: #03071e;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Playfair Display", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 800;
+}
+.container {
+  margin-inline: auto;
+  width: min(90%, 75rem);
+}
+section {
+  margin-top: 200px;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.hero {
+  /* height: 100vh; */
+  /* find out why header viewport is causing issues with child elements staying within parent */
+  background-color: var(--clr-primary-colorOne);
+  color: #fff;
+}
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.img-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-split {
+  display: flex;
+  justify-content: space-around;
+  padding: 100px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.slogan {
+  text-align: center;
+}
+hr {
+  width: 20%;
+}
+.hero-img {
+  width: 100%;
+  max-width: 900px;
+}
+
+ul {
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: var(--clr-neutral-neutralTwo);
+  color: var(--clr-neutral-neutralOne);
+}
+.social {
+  display: flex;
+  flex-direction: row;
+}
+li {
+  margin: 20px;
+}
+.fab {
+  font-size: 3rem;
+}
+.quality {
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.products-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-showcase {
+  margin-top: 80px;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+.ft {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.sustainable {
+  text-align: center;
+}
+.product {
+  margin: 20px;
+}
+
+.product-disc {
+  text-align: center;
+  font-weight: 800;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-neutralTwo);
+}
+.social {
+  color: var(--clr-neutral-neutralOne);
+}
+.beard-info {
+  text-align: center;
+}
+.quality {
+  padding-left: 20px;
+}
+.handCrafted {
+  padding-right: 20px;
+}
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--clr-primary-colorOne);
+  color: var(--clr-neutral-neutralOne);
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  padding-left: 100px;
+}
+/* product section below */
+.productCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  margin: 80px;
+}
+.oils,
+.balms,
+.beard-care {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.productCard {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: var(--clr-primary-colorTwo); */
+}
+.product__name {
+  padding-top: 10px;
+}
+.add__button {
+  padding-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+  width: 200px;
+}
+.products {
+  max-width: 100%;
+  height: auto;
+}
+.cart__link {
+  color: #fff;
+}
+
+/* -------------------------Cart Page--------------------------------------- */
+
+.products__container {
+  display: flex;
+  max-width: 850px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.products__container .fas {
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.product__header {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  border-bottom: 4px solid lightgrey;
+  margin: 0 auto;
+}
+.product__title {
+  width: 45%;
+  word-break: break-all;
+}
+.price {
+  width: 15%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+.quantity {
+  width: 30%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+.total {
+  width: 10%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+.cart__img {
+  width: 100px;
+  height: 100px;
+}
+.cart__products {
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cart__product {
+  width: 45%;
+  display: flex;
+  /* justify-content: space-around; */
+
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 1500px) {
+  .hero-split,
+  .split,
+  .products-list,
+  .img-column,
+  .ft,
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

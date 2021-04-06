@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;800&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/622fa0937a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <h1>Bossman Beards</h1>
+        <nav>
+          <ul class="nav-items">
+            <li>Home</li>
+            <li>Sale</li>
+            <li>Contact</li>
+            <li class="cart">
+              <a href="cart.html" class="cart__link">
+                <i class="fas fa-shopping-cart"></i> <span>0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="products__container">
+      <div class="product__header">
+        <h5 class="product__title">PRODUCT</h5>
+        <h5 class="price">PRICE</h5>
+        <h5 class="quantity">QUANTITY</h5>
+        <h5 class="total">TOTAL</h5>
+      </div>
+      <div class="cart__products"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
