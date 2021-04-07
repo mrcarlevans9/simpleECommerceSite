@@ -1,3 +1,32 @@
+const faders = document.querySelectorAll('.fade-in');
+const sliders = document.querySelectorAll('.slide-in');
+
+
+const appearOptions ={
+    threshold:0,
+    rootMargin:"0px 0px -250px 0px "
+};
+
+
+const appearOnScroll=new IntersectionObserver(function(entries,appearOnScroll){
+    entries.forEach(entry=>{
+        if(!entry.isIntersecting){
+            return;
+        }else{
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+    },appearOptions);
+    
+    faders.forEach(fader=>{
+        appearOnScroll.observe(fader);
+    });
+    
+    sliders.forEach(slider=>{
+        appearOnScroll.observe(slider);
+    });
+
 let cart= document.querySelectorAll('.add__button');
 let products=[
     {
@@ -50,7 +79,7 @@ function onLoadCartNumbers(){
     
 
     if(productNumbers){
-        document.querySelector('.cart span').textContent = productNumbers
+        document.querySelector('.cart span').textContent = productNumbers;
     }
 }
 
@@ -120,6 +149,7 @@ function displayCart(){
     
     
     let productContainer = document.querySelector(".cart__products");
+    let cartCost=localStorage.getItem('totalCost');
     
     if(cartItems&&productContainer ){
         
@@ -135,7 +165,7 @@ function displayCart(){
                 </div>
                
                 <div class="price">
-                ${item.price}
+                $${item.price},00
                 </div>
                
                 <div class="quantity">
@@ -144,10 +174,22 @@ function displayCart(){
                 <i class="fas fa-arrow-circle-right"></i>
 
                 </div>
-                <div class="total">${item.inCart*item.price}</div>
+                <div class="total">$${item.inCart*item.price}.00</div>
+                
             
             `
         })
+
+        productContainer.innerHTML+=`
+        <div class="cartTotalContainer">
+        <h4 class="cartTotalTitle">
+            Cart Total
+            </h4>
+            <h4 class="cartTotal">
+                $${cartCost}.00
+            </h4>
+
+        `
 
 
     }
